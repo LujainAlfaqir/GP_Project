@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//hellloooo
 public class Player : MonoBehaviour
 {
     private float Horizontal,Verical;
@@ -44,5 +45,5 @@ public class Player : MonoBehaviour
     Instantiate(bulletPrefab,transform.position,Quaternion.identity); 
     }
 
-
+    
 }
