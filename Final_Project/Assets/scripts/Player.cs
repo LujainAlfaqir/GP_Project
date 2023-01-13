@@ -5,13 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private float Horizontal,Verical;
-    [SerializeField]
-    private float speed;
-    [SerializeField]
+    
+    private float speed=6.0f;
 
 
-    private GameObject boomPrefab;
-    private float boomSpeed = 10f;
+    [SerializeField]
+    private GameObject bulletPrefab;
+
+    private float fireRate = 0.5f;
+    private float canfire=0.0f;
+
 
     void Start()
     {
@@ -22,9 +25,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         movePlayer();
-        if (Input.GetKeyDown("Space"))
+        if (Input.GetKeyDown(KeyCode.Space)&&Time.time >= canfire)
         {
-            boomShooting();
+            bulletShooting();
         }
 
     }
@@ -36,10 +39,9 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -4.0f, 4.0f), Mathf.Clamp(transform.position.y, -3.5f, 5.5f),0);
     }
 
-    public void boomShooting() {
-    Instantiate(boomPrefab,transform.position,Quaternion.identity); 
-    transform.Translate(new Vector3(0,1,0)*boomSpeed*Time.deltaTime);
-
+    public void bulletShooting() {
+    canfire= Time.time+fireRate;
+    Instantiate(bulletPrefab,transform.position,Quaternion.identity); 
     }
 
 
