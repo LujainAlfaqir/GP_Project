@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAPrefab: {fileID: 1330817475}
-  enemyBprefab: {fileID: 0}
   enemyBossPrefab: {fileID: 3704413982436621894}
+  EnemyContainer: {fileID: 0}
 --- !u!114 &409040159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAPrefab: {fileID: 0}
-  enemyBprefab: {fileID: 0}
   enemyBossPrefab: {fileID: 0}
+  EnemyContainer: {fileID: 0}
 --- !u!4 &409040160
 Transform:
   m_ObjectHideFlags: 0
@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822582330335311124, guid: fdca1ad4ff836bf44bc808e3abc1c101, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 5822582330335311124, guid: fdca1ad4ff836bf44bc808e3abc1c101, type: 3}
       propertyPath: m_LocalPosition.y
