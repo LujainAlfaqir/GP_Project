@@ -14,6 +14,7 @@ public class EnemyA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //test
         transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 }
