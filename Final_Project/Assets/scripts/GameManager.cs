@@ -21,5 +21,6 @@ public class GameManager : MonoBehaviour
    public void UpdateScore()
     {
         Score += 10;
+        Debug.Log(Score);
     }
 }
